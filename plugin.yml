@@ -1,0 +1,9 @@
+name: SupaChat
+main: me.javoris767.supachat.SupaChat
+version: 2.6.5
+author: javoris767
+authors: [Drakia, javoris767]
+commands:
+  supachat:
+    description: Used to reload the plugin.
+softdepend: [bPermissions, PermissionsBukkit, PermissionsEx, GroupManager, Factions]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/bpermissions.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/craftbukkit-1.6.2-R0.1-20130715.060238-8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/EssentialsGroupManager.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/PermissionsBukkit-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/PermissionsEx.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/Privileges.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/Factions(6).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/mcore(2).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Javoris/Desktop/JavaCoding/Factions(5).jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

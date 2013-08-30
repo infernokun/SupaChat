@@ -1,0 +1,7 @@
+handle-me: true
+date-format: HH:mm:ss
+message-format: '+iname: +message'
+me-format: '* +name +message'
+iname-format: '{+w}[+prefix+group+suffix&f] +name'
+me-permissions: false
+variable-refresh: 100

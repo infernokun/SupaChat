@@ -1,0 +1,17 @@
+# SupaChat Variable Config
+# This is now the only method for defining variables
+users:
+    javoris767:
+        prefix: '&e'
+groups:
+    Admin:
+        prefix: '&c'
+        suffix: ''
+    Default:
+        prefix: ''
+        suffix: ''
+world:
+  users:
+    javoris767:
+      prefix: '&a'
+  wName: '[World] '
