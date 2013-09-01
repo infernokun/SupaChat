@@ -72,7 +72,7 @@ public class Factions {
 
 			UPlayer up = UPlayer.get(p);
 			UPlayer urp = UPlayer.get(pp);
-			return urp.getRelationTo(up).getColor().toString();
+			return up.getRelationTo(urp).getColor().toString();
 		}
 		return null;
 	}
