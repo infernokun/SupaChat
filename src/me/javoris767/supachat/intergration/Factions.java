@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 import me.javoris767.supachat.SupaChat;
 
 import org.anjocaido.groupmanager.permissions.AnjoPermissionsHandler;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Damageable;
@@ -33,86 +34,89 @@ import de.bananaco.bpermissions.api.CalculableType;
 public class Factions {
 	private SupaChat plugin;
 	public UPlayer up;
-	
+
 	public Factions(SupaChat supaChat) {
 		plugin = supaChat;
 	}
-	
+
 	public String FactionName(Player p) 
 	{
 		// Check disabled
 		if(UConf.isDisabled(p)) return "";
-		
+
 		// Get entities
 		UPlayer up = UPlayer.get(p);
-		
+
 		// No force
 		Faction faction = up.getFaction();
 		if(faction.isNone()) return "";
-		
+
 		return faction.getName();
 	}
-	
+
 	public String FactionNameForce(Player p) 
 	{
 		UPlayer up = UPlayer.get(p);
-		
+
 		Faction faction = up.getFaction();
 		return faction.getName();
 	}
-	
+
 	public String Relcolor(Player p, Player rp) 
 	{
 		if(rp == null) return "";
-		
+
 		if(UConf.isDisabled(p)) return "";
-		
-		UPlayer up = UPlayer.get(p);
-		UPlayer urp = UPlayer.get(rp);
-		
-		return urp.getRelationTo(up).getColor().toString();
+
+		for(Player pp : Bukkit.getOnlinePlayers()) {
+
+			UPlayer up = UPlayer.get(p);
+			UPlayer urp = UPlayer.get(pp);
+			return urp.getRelationTo(up).getColor().toString();
+		}
+		return null;
 	}
-	
+
 	public String FactionRole(Player p)
 	{
 		if(UConf.isDisabled(p)) return "";
-		
+
 		UPlayer up = UPlayer.get(p);
-		
+
 		return Txt.upperCaseFirst(up.getRole().toString().toLowerCase());
 	}
-	
+
 	public String RolePrefix(Player p) 
 	{
 		if(UConf.isDisabled(p)) return "";
-		
+
 		UPlayer up = UPlayer.get(p);
-		
+
 		Faction faction = up.getFaction();
 		if(faction.isNone()) return "";
-		
+
 		return up.getRole().getPrefix();
 	}
-	
+
 	public String RolePrefixForce(Player p)
 	{
 		if(UConf.isDisabled(p)) return "";
-		
+
 		UPlayer up = UPlayer.get(p);
-		
+
 		return up.getRole().getPrefix();
 	}
-	
+
 	public String FactionTitle(Player p) 
 	{
 		if(UConf.isDisabled(p)) return "";
-		
+
 		UPlayer up = UPlayer.get(p);
-		
+
 		if(!up.hasTitle()) return "";
 		return up.getTitle();
 	}
-	
+
 	public String factionChat(Player p, String msg, String chatFormat, UPlayer up) {
 		return factionChat(p, msg, chatFormat, false, up);
 	}
@@ -122,7 +126,7 @@ public class Factions {
 		String group = plugin.info.getGroup(p);
 		String prefix = getPrefix(p);
 		String suffix = getSuffix(p);
-		
+
 		String factionName = FactionName(p);
 		String factionNameForce = FactionNameForce(p);
 		String relColor = Relcolor(p, p);

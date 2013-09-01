@@ -48,7 +48,6 @@ public class PlayerListener implements Listener
 		}else{
 			UPlayer up = UPlayer.get(player);
 			event.setFormat(plugin.fac.factionChat(player, message, plugin.chatFormat, up));
-
 		}
 	}
 
